@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Top_bar"
+        android:background="@color/red"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:padding="16dp"
+        android:gravity="start" />
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="end"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:text="@string/dis_calc" />
+
+    <!-- Buttons layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- First row: Clear, Divide, Multiply -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/clear"
+                android:onClick="onClearClick"
+                android:backgroundTint="@color/purple"
+                android:textColor="@color/white"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/divide"
+                android:onClick="onOperatorClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/multiply"
+                android:onClick="onOperatorClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+        </LinearLayout>
+
+        <!-- Second row: 7, 8, 9, Subtract (-) -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/seven"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/eight"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nine"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/minus"
+                android:onClick="onOperatorClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+        </LinearLayout>
+
+        <!-- Third row: 4, 5, 6, Add (+) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/four"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/five"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/six"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/plus"
+                android:textColor="@color/white"
+                android:onClick="onOperatorClick"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+        </LinearLayout>
+
+        <!-- Fourth row: 1, 2, 3, Equals (=) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/one"
+                android:onClick="onDigitButtonClick"
+                android:backgroundTint="@color/purple"
+                android:textColor="@color/white"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/two"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/three"
+                android:onClick="onDigitButtonClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/equals"
+                android:onClick="onEqualsClick"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple"
+                style='?android:attr/buttonBarButtonStyle'/>
+        </LinearLayout>
+
+        <!-- Fifth row: 0, Decimal (.) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/zero"
+                android:onClick="onDigitButtonClick"
+                android:backgroundTint="@color/purple"
+                android:textColor="@color/white"
+                style='?android:attr/buttonBarButtonStyle'/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dot"
+                android:onClick="onDigitButtonClick"
+                android:backgroundTint="@color/purple"
+                android:textColor="@color/white"
+                style='?android:attr/buttonBarButtonStyle'/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/advanced_button"
+            android:onClick="onAdvanceButtonClick"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            style='?android:attr/buttonBarButtonStyle'/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/historyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="History:"
+        android:gravity="start"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+</LinearLayout>
